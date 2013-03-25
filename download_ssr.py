@@ -6,6 +6,9 @@ import tempfile
 
 
 def get_ssr_data():
+
+    return "/home/atlefren/data/stedsnavn.geojson"
+
     saved_filename, headers = urllib.urlretrieve(config.base_url + "stedsnavn.geojson.zip")
 
     zfile = zipfile.ZipFile(saved_filename)
