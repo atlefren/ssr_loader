@@ -1,0 +1,35 @@
+[
+    {
+        "key": 1,
+        "name": "Terrengform"
+    },
+    {
+        "key": 2,
+        "name": "Vannkontur"
+
+    },
+    {
+        "key": 3,
+        "name": "Markslag"
+    },
+    {
+        "key": 4,
+        "name": "Kystdata"
+    },
+    {
+        "key": 5,
+        "name": "Bebyggelse"
+    },
+    {
+        "key": 6,
+        "name": "Samferdsel"
+    },
+    {
+        "key": 7,
+        "name": "AdministrativtOmråde"
+    },
+    {
+        "key": 8,
+        "name": "AnnenNavnetype"
+    }
+]
