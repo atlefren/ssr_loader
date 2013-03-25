@@ -5,10 +5,10 @@ Tool for loading SentraltStedsnavnsRegister into a PostGIS database
 
 3-step guide
 ------------
-# Setup a PostGIS database
-# Edit config.py
-# run update_ssr_database.py
-# wait...
+1. Setup a PostGIS database
+2. Edit config.py
+3. run update_ssr_database.py
+4. wait...
 
 
 Todo
