@@ -75,8 +75,11 @@ def ssr_2_postgis(file, ssr_table):
                 fields["geog"] = geom.wkt
 
                 query, fields = create_insert(fields, table_name)
-                cur.execute(query, fields)
-                num_features_read+=1
+                try:
+                    cur.execute(query, fields)
+                    num_features_read+=1
+                except psycopg2.IntegrityError, e:
+                    print e
 
                 if num_features_read%10000==0:
                     print "read %i features" % num_features_read
@@ -88,10 +91,3 @@ def ssr_2_postgis(file, ssr_table):
     connection.close()
     elapsed_time = time.time() - start_time
     return num_features_read, elapsed_time
-
-#file = '/home/atlefren/data/stedsnavn.geojson'
-
-
-#num_features = ssr_2_postgis(file)
-
-#print "Finished writing %i features in %f seconds" % (num_features, elapsed_time)
